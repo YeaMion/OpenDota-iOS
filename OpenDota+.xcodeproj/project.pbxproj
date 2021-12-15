@@ -14,7 +14,6 @@
 		D813868E26FEE7D6008DC180 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D813868D26FEE7D6008DC180 /* ContentView.swift */; };
 		D813869026FEE7D7008DC180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D813868F26FEE7D7008DC180 /* Assets.xcassets */; };
 		D813869326FEE7D7008DC180 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D813869226FEE7D7008DC180 /* Preview Assets.xcassets */; };
-		D813869626FEE7D7008DC180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D813869426FEE7D7008DC180 /* LaunchScreen.storyboard */; };
 		D8938383275FB3520058EB9D /* DotaItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8938382275FB3520058EB9D /* DotaItemsView.swift */; };
 		D8938385275FB6430058EB9D /* DotaItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8938384275FB6430058EB9D /* DotaItemRow.swift */; };
 		D894BD2A2768CA6700B1BFF5 /* dotaHeroes.json in Resources */ = {isa = PBXBuildFile; fileRef = D894BD292768CA6600B1BFF5 /* dotaHeroes.json */; };
@@ -52,7 +51,6 @@
 		D813868D26FEE7D6008DC180 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D813868F26FEE7D7008DC180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D813869226FEE7D7008DC180 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D813869526FEE7D7008DC180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D813869726FEE7D7008DC180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8938382275FB3520058EB9D /* DotaItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaItemsView.swift; sourceTree = "<group>"; };
 		D8938384275FB6430058EB9D /* DotaItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaItemRow.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				D813868B26FEE7D6008DC180 /* SceneDelegate.swift */,
 				D813868D26FEE7D6008DC180 /* ContentView.swift */,
 				D813868F26FEE7D7008DC180 /* Assets.xcassets */,
-				D813869426FEE7D7008DC180 /* LaunchScreen.storyboard */,
 				D813869726FEE7D7008DC180 /* Info.plist */,
 				D813869126FEE7D7008DC180 /* Preview Content */,
 			);
@@ -237,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C61C6B270C05BA0070AA44 /* dotaItems.json in Resources */,
-				D813869626FEE7D7008DC180 /* LaunchScreen.storyboard in Resources */,
 				D894BD2A2768CA6700B1BFF5 /* dotaHeroes.json in Resources */,
 				D813869326FEE7D7008DC180 /* Preview Assets.xcassets in Resources */,
 				D813869026FEE7D7008DC180 /* Assets.xcassets in Resources */,
@@ -270,17 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D813869426FEE7D7008DC180 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D813869526FEE7D7008DC180 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D813869826FEE7D7008DC180 /* Debug */ = {
