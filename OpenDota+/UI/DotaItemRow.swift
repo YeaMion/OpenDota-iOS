@@ -15,7 +15,7 @@ struct DotaItemRow: View {
         HStack {
             // https://steamcdn-a.akamaihd.net
             KFImage(URL(string: "https://cdn.cloudflare.steamstatic.com" + dotaItem.img)!)
-                .placeholder { Image("item_placeholder").resizable().frame(width: 43, height: 33, alignment: .center) }
+                .placeholder { Image("item_placeholder").resizable().frame(width: 43, height: 33, alignment: .center).scaledToFill() }
                 .resizable()
                 .frame(width: 43, height: 33, alignment: .leading)
                 .cornerRadius(4)

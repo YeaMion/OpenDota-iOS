@@ -50,9 +50,3 @@ struct DotaHeroesView: View {
         }
     }
 }
-
-struct DotaHeroesView_Previews: PreviewProvider {
-    static var previews: some View {
-        DotaHeroesView()
-    }
-}

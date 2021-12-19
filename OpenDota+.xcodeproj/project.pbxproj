@@ -14,6 +14,7 @@
 		D813868E26FEE7D6008DC180 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D813868D26FEE7D6008DC180 /* ContentView.swift */; };
 		D813869026FEE7D7008DC180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D813868F26FEE7D7008DC180 /* Assets.xcassets */; };
 		D813869326FEE7D7008DC180 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D813869226FEE7D7008DC180 /* Preview Assets.xcassets */; };
+		D84D0072276EDB8C000D7DB7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D84D0071276EDB8C000D7DB7 /* Alamofire */; };
 		D8938383275FB3520058EB9D /* DotaItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8938382275FB3520058EB9D /* DotaItemsView.swift */; };
 		D8938385275FB6430058EB9D /* DotaItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8938384275FB6430058EB9D /* DotaItemRow.swift */; };
 		D894BD2A2768CA6700B1BFF5 /* dotaHeroes.json in Resources */ = {isa = PBXBuildFile; fileRef = D894BD292768CA6600B1BFF5 /* dotaHeroes.json */; };
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F2E3652760E822009B8DDF /* Kingfisher in Frameworks */,
+				D84D0072276EDB8C000D7DB7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +190,7 @@
 			name = "OpenDota+";
 			packageProductDependencies = (
 				D8F2E3642760E822009B8DDF /* Kingfisher */,
+				D84D0071276EDB8C000D7DB7 /* Alamofire */,
 			);
 			productName = "OpenDota+";
 			productReference = D813868626FEE7D6008DC180 /* OpenDota+.app */;
@@ -218,6 +221,7 @@
 			mainGroup = D813867D26FEE7D6008DC180;
 			packageReferences = (
 				D8F2E3632760E822009B8DDF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D84D0070276EDB8C000D7DB7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D813868726FEE7D6008DC180 /* Products */;
 			projectDirPath = "";
@@ -458,6 +462,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D84D0070276EDB8C000D7DB7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D8F2E3632760E822009B8DDF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -469,6 +481,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D84D0071276EDB8C000D7DB7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D84D0070276EDB8C000D7DB7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		D8F2E3642760E822009B8DDF /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D8F2E3632760E822009B8DDF /* XCRemoteSwiftPackageReference "Kingfisher" */;

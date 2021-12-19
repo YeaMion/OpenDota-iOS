@@ -20,7 +20,7 @@ struct DotaItemInfoView: View {
                 // 标题
                 HStack {
                     KFImage(URL(string: "https://steamcdn-a.akamaihd.net" + dotaItem.img)!)
-                        .placeholder { Image("item_placeholder").resizable().frame(width: 85, height: 64, alignment: .center) }
+                        .placeholder { Image("item_placeholder").resizable().frame(width: 85, height: 64, alignment: .center).scaledToFill() }
                         .resizable()
                         .frame(width: 85, height: 64, alignment: .leading)
                         .cornerRadius(4)
@@ -176,7 +176,7 @@ struct DotaItemInfoView: View {
                                             NavigationLink(
                                                 destination: DotaItemInfoView(dotaItem: com!)) {
                                                     KFImage(URL(string: "https://steamcdn-a.akamaihd.net" + com!.img)!)
-                                                        .placeholder { Image("item_placeholder").resizable().frame(width: 43, height: 33, alignment: .center) }
+                                                        .placeholder { Image("item_placeholder").resizable().frame(width: 43, height: 33, alignment: .center).scaledToFill() }
                                                         .resizable()
                                                         .frame(width: 43, height: 33, alignment: .leading)
                                                         .cornerRadius(4)
@@ -195,11 +195,5 @@ struct DotaItemInfoView: View {
             }
             .navigationBarTitle(dotaItem.dname ?? "")
         }
-    }
-}
-
-struct DotaItemInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        DotaItemInfoView(dotaItem: dotaItemsData[2])
     }
 }

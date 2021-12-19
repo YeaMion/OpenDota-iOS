@@ -21,7 +21,6 @@ struct DotaItemsView: View {
                     // }
                 }
             }
-            .ignoresSafeArea()
             .navigationTitle("Items")
             .navigationBarTitle("Items")
         }
