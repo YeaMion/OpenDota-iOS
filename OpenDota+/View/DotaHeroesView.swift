@@ -14,7 +14,7 @@ struct DotaHeroesView: View {
     var body: some View {
         NavigationView {
             List {
-                Picker("Favorite Color", selection: $selectedColorIndex, content: {
+                Picker("Attributes", selection: $selectedColorIndex, content: {
                     Text("Strength").tag(0)
                     Text("Agility").tag(1)
                     Text("Intelligence").tag(2)

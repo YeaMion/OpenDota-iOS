@@ -26,12 +26,3 @@ struct DotaItemsView: View {
         }
     }
 }
-
-struct DotaItemsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            DotaItemsView()
-        }
-        .environmentObject(DotaData())
-    }
-}

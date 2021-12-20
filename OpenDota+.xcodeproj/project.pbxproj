@@ -23,6 +23,8 @@
 		D894BD302768F57E00B1BFF5 /* DotaHeroInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894BD2F2768F57E00B1BFF5 /* DotaHeroInfoView.swift */; };
 		D8C61C6B270C05BA0070AA44 /* dotaItems.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C61C6A270C05BA0070AA44 /* dotaItems.json */; };
 		D8C61C6D270C07600070AA44 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C61C6C270C07600070AA44 /* DataLoader.swift */; };
+		D8E23C77276F78A7008B5386 /* DotaHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E23C76276F78A7008B5386 /* DotaHomeView.swift */; };
+		D8E23C79276F7B3A008B5386 /* dotaHeroInfoTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D8E23C78276F7B3A008B5386 /* dotaHeroInfoTest.json */; };
 		D8EE6C9A2763BB810081405B /* DotaHeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EE6C992763BB810081405B /* DotaHeroesView.swift */; };
 		D8EE6C9C2763BBA00081405B /* DotaHeroRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EE6C9B2763BBA00081405B /* DotaHeroRow.swift */; };
 		D8EE6C9E2764BA1B0081405B /* DotaItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EE6C9D2764BA1B0081405B /* DotaItemInfoView.swift */; };
@@ -61,6 +63,8 @@
 		D894BD2F2768F57E00B1BFF5 /* DotaHeroInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroInfoView.swift; sourceTree = "<group>"; };
 		D8C61C6A270C05BA0070AA44 /* dotaItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dotaItems.json; sourceTree = "<group>"; };
 		D8C61C6C270C07600070AA44 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		D8E23C76276F78A7008B5386 /* DotaHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHomeView.swift; sourceTree = "<group>"; };
+		D8E23C78276F7B3A008B5386 /* dotaHeroInfoTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dotaHeroInfoTest.json; sourceTree = "<group>"; };
 		D8EE6C992763BB810081405B /* DotaHeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroesView.swift; sourceTree = "<group>"; };
 		D8EE6C9B2763BBA00081405B /* DotaHeroRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroRow.swift; sourceTree = "<group>"; };
 		D8EE6C9D2764BA1B0081405B /* DotaItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaItemInfoView.swift; sourceTree = "<group>"; };
@@ -154,10 +158,11 @@
 		D8938381275FB3420058EB9D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D8938382275FB3520058EB9D /* DotaItemsView.swift */,
 				D8EE6C992763BB810081405B /* DotaHeroesView.swift */,
-				D8EE6C9D2764BA1B0081405B /* DotaItemInfoView.swift */,
+				D8938382275FB3520058EB9D /* DotaItemsView.swift */,
+				D8E23C76276F78A7008B5386 /* DotaHomeView.swift */,
 				D894BD2F2768F57E00B1BFF5 /* DotaHeroInfoView.swift */,
+				D8EE6C9D2764BA1B0081405B /* DotaItemInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			children = (
 				D8C61C6A270C05BA0070AA44 /* dotaItems.json */,
 				D894BD292768CA6600B1BFF5 /* dotaHeroes.json */,
+				D8E23C78276F7B3A008B5386 /* dotaHeroInfoTest.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				D894BD2A2768CA6700B1BFF5 /* dotaHeroes.json in Resources */,
 				D813869326FEE7D7008DC180 /* Preview Assets.xcassets in Resources */,
 				D813869026FEE7D7008DC180 /* Assets.xcassets in Resources */,
+				D8E23C79276F7B3A008B5386 /* dotaHeroInfoTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 				D8EE6C9E2764BA1B0081405B /* DotaItemInfoView.swift in Sources */,
 				D8EE6C9A2763BB810081405B /* DotaHeroesView.swift in Sources */,
 				D894BD302768F57E00B1BFF5 /* DotaHeroInfoView.swift in Sources */,
+				D8E23C77276F78A7008B5386 /* DotaHomeView.swift in Sources */,
 				D894BD2E2768E1F800B1BFF5 /* MorphDataType.swift in Sources */,
 				D8038C96270B1D1D005778A4 /* NetworkHelper.swift in Sources */,
 				D8F2E3672760EAFD009B8DDF /* DotaData.swift in Sources */,
