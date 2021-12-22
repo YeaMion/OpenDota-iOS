@@ -38,7 +38,7 @@ struct ContentView: View {
                 }
                 .tag(1)
 
-            DotaHomeView()
+            DotaPostView()
                 .tabItem {
                     VStack {
                         if selection == 2 {

@@ -13,4 +13,5 @@ final class DotaData: ObservableObject {
     @Published var dotaHeroesDict = dotaHeroesDic
     @Published var dotaItemsList = dotaItemsData
     @Published var dotaItemsDict = dotaItemsDic
+    @Published var dotaRecentMatchedList = dotaRecentMatchesData
 }
