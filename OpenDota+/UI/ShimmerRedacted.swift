@@ -9,7 +9,7 @@ import SwiftUI
 /// an operation is in progress.
 public struct Shimmer: ViewModifier {
     @State private var phase: CGFloat = 0
-    var duration = 1.5
+    var duration = 1.0
     var bounce = false
     
     public func body(content: Content) -> some View {
@@ -41,7 +41,7 @@ public struct Shimmer: ViewModifier {
     struct GradientMask: View {
         let phase: CGFloat
         let centerColor = Color.black
-        let edgeColor = Color.black.opacity(0.3)
+        let edgeColor = Color.black.opacity(0.8)
         
         var body: some View {
             LinearGradient(gradient:
@@ -62,7 +62,7 @@ public extension View {
     ///   - duration: The duration of a shimmer cycle in seconds. Default: `1.5`.
     ///   - bounce: Whether to bounce (reverse) the animation back and forth. Defaults to `false`.
     @ViewBuilder func shimmering(
-        active: Bool = true, duration: Double = 1.5, bounce: Bool = false
+        active: Bool = true, duration: Double = 1, bounce: Bool = false
     ) -> some View {
         if active {
             modifier(Shimmer(duration: duration, bounce: bounce))
