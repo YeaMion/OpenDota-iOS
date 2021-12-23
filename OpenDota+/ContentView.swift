@@ -20,7 +20,7 @@ struct ContentView: View {
                         } else {
                             Image(colorScheme == .light ? "tabicon_hero_light_unselected" : "tabicon_hero_dark_unselected")
                         }
-                        // Text("Heroes")
+                        Text("Heroes")
                     }
                 }
                 .tag(0)
@@ -33,7 +33,7 @@ struct ContentView: View {
                         } else {
                             Image(colorScheme == .light ? "tabicon_item_light_unselected" : "tabicon_item_dark_unselected")
                         }
-                        // Text("Items")
+                        Text("Items")
                     }
                 }
                 .tag(1)
@@ -46,7 +46,7 @@ struct ContentView: View {
                         } else {
                             Image(colorScheme == .light ? "tabicon_match_light_unselected" : "tabicon_match_dark_unselected")
                         }
-                        // Text("Matches")
+                        Text("Dota")
                     }
                 }
                 .tag(2)
