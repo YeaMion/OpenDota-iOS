@@ -6,22 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
-
-// let items:[DotaItemModel]=req()
-//
-// func req<T: Decodable>() -> T {
-//    NetworkManager<[DotaItemModel]>.requestData(.get, URLString: "https://api.opendota.com/api/constants/items", parameters: nil) { result in
-//        switch result {
-//        case .success(let response):
-//            let data: [DotaItemModel] = response.self
-//            //let model = MenusModel(data: data)
-//            //return data
-//        case .failure(let error):
-//            print(error.localizedDescription)
-//        }
-//    } as! T
-// }
 
 struct Attrib: Decodable, Hashable
 {

@@ -44,6 +44,28 @@ struct DotaItemInfoView: View {
                             case .int(let cst): Text(String(cst)).foregroundColor(Color(red: 196/255.0, green: 151/255.0, blue: 53/255.0))
                             case .none: Text("0").foregroundColor(Color(red: 196/255.0, green: 151/255.0, blue: 53/255.0))
                             }
+
+                            switch dotaItem.tier {
+                            case .string(let ti):
+                                if ti != "0" && ti != "" {
+                                    Text("TIER \(ti)")
+                                        .font(.system(size: 12))
+                                        .opacity(0.7)
+                                        .frame(width: 48, height: 18, alignment: .center)
+                                        .background(colorScheme == .light ? Color(red: 236/255.0, green: 236/255.0, blue: 236/255.0) : Color(.white).opacity(0.2))
+                                        .cornerRadius(3)
+                                }
+                            case .int(let ti):
+                                if ti > 0 {
+                                    Text("TIER \(String(ti))")
+                                        .font(.system(size: 12))
+                                        .opacity(0.7)
+                                        .frame(width: 48, height: 18, alignment: .center)
+                                        .background(colorScheme == .light ? Color(red: 236/255.0, green: 236/255.0, blue: 236/255.0) : Color(.white).opacity(0.2))
+                                        .cornerRadius(3)
+                                }
+                            case .none: Text("").frame(width: 0, height: 0).clipped()
+                            }
                             Spacer()
                         }
                         Spacer()

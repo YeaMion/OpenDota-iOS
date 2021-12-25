@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 let dotaHeroesData: [DotaHeroModel] = loadDotaHeroes()
 var dotaHeroesDic: [String: DotaHeroModel] = [:]

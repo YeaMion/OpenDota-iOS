@@ -38,3 +38,5 @@ struct DotaHeroModel: Decodable, Identifiable {
     var cm_enabled: Bool?
     var legs: Int?
 }
+
+struct DotaHeroInfoModel: Decodable {}

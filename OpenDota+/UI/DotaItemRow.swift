@@ -24,6 +24,7 @@ struct DotaItemRow: View {
             Text(dotaItem.dname ?? "Unknown")
                 .font(.system(size: 14))
                 .lineLimit(1)
+
             Spacer()
         }
     }

@@ -14,39 +14,30 @@ struct ContentView: View {
         TabView(selection: $selection) {
             DotaHeroesView()
                 .tabItem {
-                    VStack {
-                        if selection == 0 {
-                            Image(colorScheme == .light ? "tabicon_hero_light" : "tabicon_hero_dark")
-                        } else {
-                            Image(colorScheme == .light ? "tabicon_hero_light_unselected" : "tabicon_hero_dark_unselected")
-                        }
-                        Text("Heroes")
+                    if selection == 0 {
+                        Image(colorScheme == .light ? "tabicon_hero_light" : "tabicon_hero_dark")
+                    } else {
+                        Image(colorScheme == .light ? "tabicon_hero_light_unselected" : "tabicon_hero_dark_unselected")
                     }
                 }
                 .tag(0)
 
             DotaItemsView()
                 .tabItem {
-                    VStack {
-                        if selection == 1 {
-                            Image(colorScheme == .light ? "tabicon_item_light" : "tabicon_item_dark")
-                        } else {
-                            Image(colorScheme == .light ? "tabicon_item_light_unselected" : "tabicon_item_dark_unselected")
-                        }
-                        Text("Items")
+                    if selection == 1 {
+                        Image(colorScheme == .light ? "tabicon_item_light" : "tabicon_item_dark")
+                    } else {
+                        Image(colorScheme == .light ? "tabicon_item_light_unselected" : "tabicon_item_dark_unselected")
                     }
                 }
                 .tag(1)
 
             DotaPostView()
                 .tabItem {
-                    VStack {
-                        if selection == 2 {
-                            Image(colorScheme == .light ? "tabicon_match_light" : "tabicon_match_dark")
-                        } else {
-                            Image(colorScheme == .light ? "tabicon_match_light_unselected" : "tabicon_match_dark_unselected")
-                        }
-                        Text("Dota")
+                    if selection == 2 {
+                        Image(colorScheme == .light ? "tabicon_match_light" : "tabicon_match_dark")
+                    } else {
+                        Image(colorScheme == .light ? "tabicon_match_light_unselected" : "tabicon_match_dark_unselected")
                     }
                 }
                 .tag(2)
