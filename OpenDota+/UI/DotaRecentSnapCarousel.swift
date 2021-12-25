@@ -35,7 +35,7 @@ struct DotaRecentSnapCarousel<Content: View, T: Identifiable>: View {
             HStack(spacing: spacing) {
                 ForEach(list) { item in
                     content(item)
-                        .frame(width: proxy.size.width - trailingSpace)
+                        .frame(width: abs(proxy.size.width - trailingSpace))
                 }
             }
             .padding(.horizontal, spacing)

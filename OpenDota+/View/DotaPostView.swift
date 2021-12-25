@@ -18,6 +18,9 @@ struct DotaPostView: View {
             ScrollView {
                 LazyVStack {
                     Divider()
+                        .padding(.leading, 20)
+                        .padding(.trailing, 20)
+
                     HStack {
                         Text("Recent")
                             .font(.title2)
@@ -25,8 +28,7 @@ struct DotaPostView: View {
                         Spacer()
                     }
                     .padding(.leading, 20)
-
-                    DotaRecentSnapCarousel(trailingSpace: 70, index: $currentIndex, items: dotaData.dotaRecentMatchedList, content: { match in
+                    DotaRecentSnapCarousel(trailingSpace: 30, index: $currentIndex, items: dotaData.dotaRecentMatchedList, content: { match in
                         GeometryReader { proxy in
                             let size = proxy.size
 
@@ -34,14 +36,32 @@ struct DotaPostView: View {
                                 .frame(width: size.width)
                         }
                     })
+                        .frame(height: 120)
 
-//                    ScrollView(.horizontal, showsIndicators: false) {
-//                        HStack(alignment: .top, spacing: 0) {
-//                            Spacer(minLength: 12)
-//                            DotaRecentCell()
-//                            Spacer(minLength: 12)
-//                        }
-//                    }
+                    Divider()
+                        .padding(.leading, 20)
+                        .padding(.trailing, 20)
+
+                    HStack {
+                        Text("Patches")
+                            .font(.title2)
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.leading, 20)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top, spacing: 0) {
+                            Spacer(minLength: 12)
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            DotaPatchCell()
+                            Spacer(minLength: 12)
+                        }
+                    }
                 }
             }
             .navigationTitle("Dota")
