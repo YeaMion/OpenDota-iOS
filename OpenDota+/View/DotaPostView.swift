@@ -13,6 +13,9 @@ struct DotaPostView: View {
     @EnvironmentObject var dotaData: DotaData
     @State var currentIndex: Int = 0
 
+    // 更新日志ViewModel
+    @ObservedObject var patchVM = PatchesViewModel()
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -52,15 +55,23 @@ struct DotaPostView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
                             Spacer(minLength: 12)
-                            DotaPatchCell()
-                            DotaPatchCell()
-                            DotaPatchCell()
-                            DotaPatchCell()
-                            DotaPatchCell()
-                            DotaPatchCell()
-                            DotaPatchCell()
+
+                            if (patchVM.patches?.isEmpty) != false {
+                                Text("Nothing here...")
+                            } else {
+                                ForEach(patchVM.patches ?? [], id: \.patch_timestamp) { patch in
+                                    DotaPatchCell(patch: patch)
+                                }
+                            }
+
                             Spacer(minLength: 12)
                         }
+                    }
+                    .redacted(
+                        reason: patchVM.isLoading ? .placeholder : []
+                    )
+                    .onAppear {
+                        patchVM.requestPatches()
                     }
                 }
             }

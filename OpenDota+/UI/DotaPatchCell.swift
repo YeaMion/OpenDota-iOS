@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DotaPatchCell: View {
+    let patch: PatchNoteModel
     var body: some View {
         ZStack {
             Image("PatchNoteCover")
@@ -15,18 +16,12 @@ struct DotaPatchCell: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 120, height: 70)
                 .cornerRadius(8)
-            Text("7.30e")
+            Text(patch.patch_name ?? "UNKNOWN")
                 .foregroundColor(.white)
                 .font(.custom("Reaver-Bold", size: 26))
                 .opacity(0.9)
         }
         .padding(.leading, 5)
         .padding(.trailing, 5)
-    }
-}
-
-struct DotaPatchCell_Previews: PreviewProvider {
-    static var previews: some View {
-        DotaPatchCell()
     }
 }
