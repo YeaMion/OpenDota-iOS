@@ -18,6 +18,8 @@ struct DotaPostView: View {
 
     @State var firstFetchPatches: Bool = true
 
+    @State var showSetting = false
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -81,6 +83,19 @@ struct DotaPostView: View {
                 }
             }
             .navigationTitle("Dota")
+            .sheet(isPresented: $showSetting, content: {
+                Text("Setting")
+            })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { self.showSetting.toggle() }) {
+                        Image(systemName: "gearshape.fill")
+                            .foregroundColor(colorScheme == .light ? .black : .white)
+                            .imageScale(.medium)
+                            .accessibility(label: Text("Setting"))
+                    }
+                }
+            }
         }
     }
 }
