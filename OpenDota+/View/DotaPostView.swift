@@ -14,7 +14,9 @@ struct DotaPostView: View {
     @State var currentIndex: Int = 0
 
     // 更新日志ViewModel
-    @ObservedObject var patchVM = PatchesViewModel()
+    @StateObject var patchVM = PatchesViewModel()
+
+    @State var firstFetchPatches: Bool = true
 
     var body: some View {
         NavigationView {
@@ -68,10 +70,13 @@ struct DotaPostView: View {
                         }
                     }
                     .redacted(
-                        reason: patchVM.isLoading ? .placeholder : []
+                        reason: patchVM.isLoaded ? [] : .placeholder
                     )
                     .onAppear {
-                        patchVM.requestPatches()
+                        if firstFetchPatches || patchVM.isLoaded == false {
+                            patchVM.requestPatches()
+                            firstFetchPatches = false
+                        }
                     }
                 }
             }

@@ -12,9 +12,7 @@ class PatchesViewModel: Decodable, ObservableObject {
     @Published var patches: [PatchNoteModel]?
     @Published var success: Bool?
 
-    @Published var isLoading: Bool = true
-
-    var isFetchFinished: Bool = false
+    @Published var isLoaded: Bool = false
 
     enum CodingKeys: CodingKey {
         case patches
@@ -29,20 +27,17 @@ class PatchesViewModel: Decodable, ObservableObject {
 
     init() {
         patches = [
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123),
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123),
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123),
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123),
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123),
-            PatchNoteModel(patch_name: "123", patch_number: "123", patch_timestamp: 123)
+            PatchNoteModel(patch_name: "", patch_number: "0", patch_timestamp: 0),
+            PatchNoteModel(patch_name: "", patch_number: "1", patch_timestamp: 1),
+            PatchNoteModel(patch_name: "", patch_number: "2", patch_timestamp: 2),
+            PatchNoteModel(patch_name: "", patch_number: "3", patch_timestamp: 3),
+            PatchNoteModel(patch_name: "", patch_number: "4", patch_timestamp: 4),
+            PatchNoteModel(patch_name: "", patch_number: "5", patch_timestamp: 5)
         ]
         success = false
     }
 
     func requestPatches() {
-        if isFetchFinished == true {
-            return
-        }
         AF.request("https://www.dota2.com/datafeed/patchnoteslist?language=english")
             .validate(statusCode: 200 ..< 300)
             .responseString { response in
@@ -59,6 +54,12 @@ class PatchesViewModel: Decodable, ObservableObject {
                                         patchesTemp = pchs.patches!
                                     }
                                     patchesTemp.reverse()
+
+                                    if patchesTemp.isEmpty {
+                                        self.isLoaded = false
+                                        return
+                                    }
+
                                     self.patches?.removeAll()
                                     self.patches = []
                                     var i = 0
@@ -67,10 +68,9 @@ class PatchesViewModel: Decodable, ObservableObject {
                                         self.patches?.append(patchesTemp[i])
                                         i += 1
                                     }
-                                    self.isLoading = false
-                                    if self.patches?.isEmpty == false {
-                                        self.isFetchFinished = true
-                                    }
+                                    self.isLoaded = true
+                                } else {
+                                    self.isLoaded = false
                                 }
                             } catch {}
                         }
