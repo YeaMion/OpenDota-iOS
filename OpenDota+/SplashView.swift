@@ -24,6 +24,7 @@ struct SplashView: View {
                     Text("Powered by OpenDota")
                         .font(.custom("Reaver-Bold", size: 16))
                         .opacity(0.9)
+                        .padding(.bottom, 20)
                 }
             }
         }
