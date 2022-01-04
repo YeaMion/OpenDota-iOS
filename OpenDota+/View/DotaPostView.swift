@@ -19,6 +19,12 @@ struct DotaPostView: View {
     @State var firstFetchPatches: Bool = true
 
     @State var showSetting = false
+    @State var showSearch = false
+
+    @State private var appearanceIndex = 0
+    @State private var startpageIndex = 0
+    var appearanceOptions = ["Auto", "Dark", "Light"]
+    var startpageOptions = ["Heroes", "Items", "Dota"]
 
     var body: some View {
         NavigationView {
@@ -84,7 +90,73 @@ struct DotaPostView: View {
             }
             .navigationTitle("Dota")
             .sheet(isPresented: $showSetting, content: {
-                Text("Setting")
+                NavigationView {
+                    VStack {
+                        Form {
+                            Section(header: Text("General")) {
+                                Picker(selection: $appearanceIndex, label: Text("Appearance")) {
+                                    ForEach(0 ..< appearanceOptions.count) {
+                                        Text(self.appearanceOptions[$0])
+                                    }
+                                }
+                                Text("App Icon")
+                                Picker(selection: $startpageIndex, label: Text("Start Page")) {
+                                    ForEach(0 ..< startpageOptions.count) {
+                                        Text(self.startpageOptions[$0])
+                                    }
+                                }
+                            }
+
+                            Section(
+                                header: Text("About"),
+                                footer: VStack(alignment: .leading) {
+                                    HStack {
+                                        Text("This app is powered by")
+                                        Link("OpenDota", destination: URL(string: "https://www.opendota.com")!)
+                                            .padding(.leading, 0)
+                                            .padding(.trailing, 0)
+                                        Text(".")
+                                    }
+                                    Text("2019-2022 shockjockey.")
+                                    Link("View on GitHub", destination: URL(string: "https://github.com/sh0ckj0ckey/OpenDota-iOS")!)
+                                },
+                                content: {
+                                    HStack {
+                                        Text("Version")
+                                        Spacer()
+                                        Text("v0.1.0")
+                                            .opacity(0.6)
+                                    }
+                                    Text("Privacy Policy")
+                                    Text("Send Feedback")
+                                }
+                            )
+                        }
+                    }
+                    .navigationTitle("Settings")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: { self.showSetting.toggle() }) {
+                                Text("Done")
+                            }
+                        }
+                    }
+                }
+            })
+            .sheet(isPresented: $showSearch, content: {
+                NavigationView {
+                    VStack {
+                        HStack { Text("Search") }
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: { self.showSearch.toggle() }) {
+                                Text("Done")
+                            }
+                        }
+                    }
+                }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -93,6 +165,14 @@ struct DotaPostView: View {
                             .foregroundColor(colorScheme == .light ? .black : .white)
                             .imageScale(.medium)
                             .accessibility(label: Text("Setting"))
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { self.showSearch.toggle() }) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(colorScheme == .light ? .black : .white)
+                            .imageScale(.medium)
+                            .accessibility(label: Text("Search"))
                     }
                 }
             }
