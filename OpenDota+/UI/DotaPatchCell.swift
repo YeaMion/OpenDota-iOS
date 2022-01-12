@@ -18,7 +18,9 @@ struct DotaPatchCell: View {
                 .cornerRadius(8)
             Text(patch.patch_name ?? "UNKNOWN")
                 .foregroundColor(.white)
-                .font(.custom("Reaver-Bold", size: 26))
+                .font(.custom("Radiance-SemiBold", size: 28))
+                .bold()
+                .padding(.top, 4)
                 .opacity(0.9)
         }
         .padding(.leading, 5)

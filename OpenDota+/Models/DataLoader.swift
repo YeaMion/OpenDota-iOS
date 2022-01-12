@@ -14,7 +14,7 @@ let dotaItemsData: [DotaItemModel] = loadDotaItems()
 var dotaItemsDic: [String: DotaItemModel] = [:]
 
 let dotaRecentMatchesData: [DotaMatchModel] = [
-    DotaMatchModel(id: 1, heroName: "HOODWINK", heroKey: "hoodwink", playTime: "45 mins ago", KDA: "12/4/6", LD: "232/15", winLost: true),
+    DotaMatchModel(id: 1, heroName: "Hoodwink", heroKey: "hoodwink", playTime: "45 mins ago", KDA: "12/4/6", LD: "232/15", winLost: true),
     DotaMatchModel(id: 2, heroName: "Juggernaut", heroKey: "juggernaut", playTime: "4 hours ago", KDA: "19/9/12", LD: "226/23", winLost: false),
     DotaMatchModel(id: 3, heroName: "Legion Commander", heroKey: "legion_commander", playTime: "2 days ago", KDA: "5/2/3", LD: "102/7", winLost: true),
     DotaMatchModel(id: 4, heroName: "Marci", heroKey: "marci", playTime: "3 weeks ago", KDA: "3/7/2", LD: "76/4", winLost: false),

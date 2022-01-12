@@ -33,7 +33,23 @@ struct DotaPostView: View {
                     Divider()
                         .padding(.leading, 20)
                         .padding(.trailing, 20)
+                    // 我的资料
+                    HStack {
+                        Text("Profile")
+                            .font(.title2)
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.leading, 20)
+                    GeometryReader { proxy in
+                        let size = proxy.size
 
+                        DotaProfileCard()
+                            .frame(width: size.width)
+                    }
+                    .frame(minHeight: 150)
+
+                    // 最近的比赛
                     HStack {
                         Text("Recent")
                             .font(.title2)
@@ -51,9 +67,10 @@ struct DotaPostView: View {
                     })
                         .frame(height: 120)
 
-                    Divider()
-                        .padding(.leading, 20)
-                        .padding(.trailing, 20)
+                    // 游戏更新日志
+//                    Divider()
+//                        .padding(.leading, 20)
+//                        .padding(.trailing, 20)
 
                     HStack {
                         Text("Patches")
@@ -68,6 +85,11 @@ struct DotaPostView: View {
 
                             if (patchVM.patches?.isEmpty) != false {
                                 Text("Nothing here...")
+                                    .font(.custom("Reaver-Bold", size: 16))
+                                    .opacity(0.7)
+                                    .frame(alignment: .leading)
+                                    .frame(width: .infinity)
+                                    .padding(.leading, 10)
                             } else {
                                 ForEach(patchVM.patches ?? [], id: \.patch_timestamp) { patch in
                                     DotaPatchCell(patch: patch)
@@ -115,7 +137,6 @@ struct DotaPostView: View {
                                         Link("OpenDota", destination: URL(string: "https://www.opendota.com")!)
                                             .padding(.leading, 0)
                                             .padding(.trailing, 0)
-                                        Text(".")
                                     }
                                     Text("2019-2022 shockjockey.")
                                     Link("View on GitHub", destination: URL(string: "https://github.com/sh0ckj0ckey/OpenDota-iOS")!)
@@ -177,11 +198,5 @@ struct DotaPostView: View {
                 }
             }
         }
-    }
-}
-
-struct DotaHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        DotaPostView()
     }
 }

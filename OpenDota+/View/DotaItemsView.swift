@@ -10,7 +10,7 @@ import SwiftUI
 struct DotaItemsView: View {
     @EnvironmentObject var dotaData: DotaData
     @State private var searchString = ""
-    
+
     var body: some View {
         NavigationView {
             List {

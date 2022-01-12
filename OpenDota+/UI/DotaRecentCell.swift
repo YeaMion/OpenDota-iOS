@@ -17,7 +17,7 @@ struct DotaRecentCell: View {
             VStack(alignment: .leading, spacing: 2) {
                 HStack {
                     Text(recent.heroName)
-                        .font(.system(size: recent.heroName.count > 12 ? 14 : 18))
+                        .font(.custom("Radiance-SemiBold", size: recent.heroName.count >= 16 ? 16 : 20))
                         .bold()
                     Text(recent.winLost ? "W" : "L")
                         .font(.system(size: 8))
@@ -28,14 +28,14 @@ struct DotaRecentCell: View {
                 .padding(.top, 6)
                 .padding(.bottom, 4)
                 Text("KDA: \(recent.KDA)")
-                    .font(.system(size: 13))
+                    .font(.custom("Radiance-SemiBold", size: 14))
                     .opacity(0.8)
                 Text("LH/DN: \(recent.LD)")
-                    .font(.system(size: 13))
+                    .font(.custom("Radiance-SemiBold", size: 14))
                     .opacity(0.8)
                 Spacer()
                 Text(recent.playTime)
-                    .font(.system(size: 12))
+                    .font(.system(size: 11))
                     .opacity(0.5)
                     .padding(.bottom, 8)
             }
