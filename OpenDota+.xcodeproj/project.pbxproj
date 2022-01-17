@@ -30,6 +30,7 @@
 		D8B5878E27829B1A003728B3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5878D27829B1A003728B3 /* SplashView.swift */; };
 		D8B587A4278A86E0003728B3 /* Radiance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B587A3278A86DF003728B3 /* Radiance.ttf */; };
 		D8B587A6278B2782003728B3 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B587A5278B2782003728B3 /* SegmentedBar.swift */; };
+		D8B587AA2795D018003728B3 /* Radiance-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B587A92795D018003728B3 /* Radiance-SemiBold.ttf */; };
 		D8C61C6B270C05BA0070AA44 /* dotaItems.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C61C6A270C05BA0070AA44 /* dotaItems.json */; };
 		D8C61C6D270C07600070AA44 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C61C6C270C07600070AA44 /* DataLoader.swift */; };
 		D8E23C77276F78A7008B5386 /* DotaPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E23C76276F78A7008B5386 /* DotaPostView.swift */; };
@@ -79,6 +80,7 @@
 		D8B5878D27829B1A003728B3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D8B587A3278A86DF003728B3 /* Radiance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radiance.ttf; sourceTree = "<group>"; };
 		D8B587A5278B2782003728B3 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
+		D8B587A92795D018003728B3 /* Radiance-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Radiance-SemiBold.ttf"; sourceTree = "<group>"; };
 		D8C61C6A270C05BA0070AA44 /* dotaItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dotaItems.json; sourceTree = "<group>"; };
 		D8C61C6C270C07600070AA44 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		D8E23C76276F78A7008B5386 /* DotaPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaPostView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				D820D3162777677C001F282C /* Reaver-Bold.ttf */,
 				D8B587A3278A86DF003728B3 /* Radiance.ttf */,
+				D8B587A92795D018003728B3 /* Radiance-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				D894BD2A2768CA6700B1BFF5 /* dotaHeroes.json in Resources */,
 				D813869326FEE7D7008DC180 /* Preview Assets.xcassets in Resources */,
 				D813869026FEE7D7008DC180 /* Assets.xcassets in Resources */,
+				D8B587AA2795D018003728B3 /* Radiance-SemiBold.ttf in Resources */,
 				D820D3172777677C001F282C /* Reaver-Bold.ttf in Resources */,
 				D8E23C79276F7B3A008B5386 /* dotaHeroInfoTest.json in Resources */,
 				D8B587A4278A86E0003728B3 /* Radiance.ttf in Resources */,
