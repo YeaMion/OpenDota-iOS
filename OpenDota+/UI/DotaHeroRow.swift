@@ -19,7 +19,7 @@ struct DotaHeroRow: View {
             KFImage(URL(string: "https://cdn.cloudflare.steamstatic.com" + dotaHero.img)!)
                 .placeholder { Image("item_placeholder").resizable().scaledToFill().frame(width: 64, height: 36, alignment: .center).scaledToFill() }
                 .resizable()
-                .frame(width: 64, height: 36, alignment: .leading)
+                .frame(width: 64, height: 36, alignment: .center)
                 .cornerRadius(4)
                 .scaledToFill()
 

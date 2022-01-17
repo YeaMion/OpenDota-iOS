@@ -16,8 +16,10 @@ struct ContentView: View {
                 .tabItem {
                     if selection == 0 {
                         Image(colorScheme == .light ? "tabicon_hero_light" : "tabicon_hero_dark")
+                        Text("Heroes")
                     } else {
                         Image(colorScheme == .light ? "tabicon_hero_light_unselected" : "tabicon_hero_dark_unselected")
+                        Text("Heroes")
                     }
                 }
                 .tag(0)
@@ -26,8 +28,11 @@ struct ContentView: View {
                 .tabItem {
                     if selection == 1 {
                         Image(colorScheme == .light ? "tabicon_item_light" : "tabicon_item_dark")
+                        Text("Items")
+
                     } else {
                         Image(colorScheme == .light ? "tabicon_item_light_unselected" : "tabicon_item_dark_unselected")
+                        Text("Items")
                     }
                 }
                 .tag(1)
@@ -36,8 +41,10 @@ struct ContentView: View {
                 .tabItem {
                     if selection == 2 {
                         Image(colorScheme == .light ? "tabicon_match_light" : "tabicon_match_dark")
+                        Text("Dota")
                     } else {
                         Image(colorScheme == .light ? "tabicon_match_light_unselected" : "tabicon_match_dark_unselected")
+                        Text("Dota")
                     }
                 }
                 .tag(2)

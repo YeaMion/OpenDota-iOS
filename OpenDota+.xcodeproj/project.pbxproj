@@ -28,7 +28,6 @@
 		D8B41E6F2773623A00E03417 /* MatchesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B41E6E2773623A00E03417 /* MatchesData.swift */; };
 		D8B41E712774BB7200E03417 /* ShimmerRedacted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B41E702774BB7100E03417 /* ShimmerRedacted.swift */; };
 		D8B5878E27829B1A003728B3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5878D27829B1A003728B3 /* SplashView.swift */; };
-		D8B587902785E681003728B3 /* DotaProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5878F2785E681003728B3 /* DotaProfileCard.swift */; };
 		D8B587A2278A8505003728B3 /* Radiance-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B587A1278A8505003728B3 /* Radiance-SemiBold.ttf */; };
 		D8B587A4278A86E0003728B3 /* Radiance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B587A3278A86DF003728B3 /* Radiance.ttf */; };
 		D8B587A6278B2782003728B3 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B587A5278B2782003728B3 /* SegmentedBar.swift */; };
@@ -79,7 +78,6 @@
 		D8B41E6E2773623A00E03417 /* MatchesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesData.swift; sourceTree = "<group>"; };
 		D8B41E702774BB7100E03417 /* ShimmerRedacted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerRedacted.swift; sourceTree = "<group>"; };
 		D8B5878D27829B1A003728B3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		D8B5878F2785E681003728B3 /* DotaProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaProfileCard.swift; sourceTree = "<group>"; };
 		D8B587A1278A8505003728B3 /* Radiance-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Radiance-SemiBold.ttf"; sourceTree = "<group>"; };
 		D8B587A3278A86DF003728B3 /* Radiance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radiance.ttf; sourceTree = "<group>"; };
 		D8B587A5278B2782003728B3 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			children = (
 				D8938384275FB6430058EB9D /* DotaItemRow.swift */,
 				D8EE6C9B2763BBA00081405B /* DotaHeroRow.swift */,
-				D8B5878F2785E681003728B3 /* DotaProfileCard.swift */,
 				D8B41E6C27735C4900E03417 /* DotaRecentSnapCarousel.swift */,
 				D8B41E6A277228A000E03417 /* DotaRecentCell.swift */,
 				D820D31327775C4F001F282C /* DotaPatchCell.swift */,
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B587902785E681003728B3 /* DotaProfileCard.swift in Sources */,
 				D8038CF3270B3052005778A4 /* ItemsData.swift in Sources */,
 				D8B5878E27829B1A003728B3 /* SplashView.swift in Sources */,
 				D894BD2C2768D2EA00B1BFF5 /* HeroesData.swift in Sources */,

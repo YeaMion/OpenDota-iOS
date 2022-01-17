@@ -18,13 +18,26 @@ struct SplashView: View {
             } else {
                 VStack {
                     Spacer()
-                    Image("OpenDotaLaunchLogo")
-                        .shadow(radius: 10)
+                    HStack {
+                        Image("OpenDotaLaunchLogo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 108, height: 108, alignment: .leading)
+                            //.shadow(radius: 10)
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("OpenDota+")
+                                .font(.custom("Reaver-Bold", size: 24))
+                            Text("Powered by OpenDota")
+                                .font(.custom("Radiance", size: 16))
+                                .opacity(0.7)
+                                .padding(.leading, 2)
+                        }
+                    }
                     Spacer()
-                    Text("Powered by OpenDota")
-                        .font(.custom("Reaver-Bold", size: 14))
-                        .opacity(0.9)
-                        .padding(.bottom, 20)
+//                    Text("Powered by OpenDota")
+//                        .font(.custom("Reaver-Bold", size: 16))
+//                        .opacity(0.9)
+//                        .padding(.bottom, 20)
                 }
             }
         }
