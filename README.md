@@ -1,2 +1,2 @@
-# OpenDota-iOS
+# iDotahold
 OpenDota for iOS
